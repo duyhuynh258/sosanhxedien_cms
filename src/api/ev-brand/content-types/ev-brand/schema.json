@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ev_brands",
+  "info": {
+    "singularName": "ev-brand",
+    "pluralName": "ev-brands",
+    "displayName": "EVBrand",
+    "description": "Electric Vehicle Brands/Manufacturers"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "website": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "models": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ev-model.ev-model",
+      "mappedBy": "brand"
+    }
+  }
+}

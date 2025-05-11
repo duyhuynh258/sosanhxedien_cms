@@ -1,0 +1,92 @@
+erDiagram
+    EVBrand ||--o{ EVModel : "manufactures"
+    EVModel }o--o{ ReviewArticle : "featured_in"
+    Author ||--o{ ReviewArticle : "writes"
+    Tag }o--o{ ReviewArticle : "categorizes"
+    NewsletterSubscriber {
+        uuid id PK
+        string email
+        string name
+        boolean active
+        datetime created_at
+        datetime updated_at
+    }
+    EVBrand {
+        uuid id PK
+        string name
+        string logo
+        string website
+        string country
+        string description
+        datetime created_at
+        datetime updated_at
+    }
+    EVModel {
+        uuid id PK
+        string model_name
+        uuid brand_id FK
+        string year
+        number price_vnd
+        number range_km
+        number battery_kwh
+        string charge_time
+        string image
+        string description
+        string slug
+        number acceleration
+        string top_speed
+        string power
+        string torque
+        string drive_type
+        string seating_capacity
+        string dimensions
+        string wheelbase
+        string ground_clearance
+        string weight
+        string cargo_volume
+        string warranty
+        datetime created_at
+        datetime updated_at
+    }
+    ReviewArticle {
+        uuid id PK
+        string title
+        string excerpt
+        text content
+        datetime publish_date
+        string featured_image
+        uuid author_id FK
+        number view_count
+        string slug
+        boolean is_featured
+        datetime created_at
+        datetime updated_at
+    }
+    Author {
+        uuid id PK
+        string name
+        string avatar
+        text bio
+        string email
+        string social_media_links
+        datetime created_at
+        datetime updated_at
+    }
+    Tag {
+        uuid id PK
+        string name
+        string slug
+        string description
+        datetime created_at
+        datetime updated_at
+    }
+    EVModel_ReviewArticle {
+        uuid id PK
+        uuid ev_model_id FK
+        uuid review_article_id FK
+    }
+    ReviewArticle_Tag {
+        uuid id PK
+        uuid review_article_id FK
+        uuid tag_id FK
+    }

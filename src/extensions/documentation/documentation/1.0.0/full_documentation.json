@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-05-12T15:29:29.847Z"
+    "x-generation-date": "2025-05-15T16:49:15.307Z"
   },
   "security": [
     {
@@ -1644,42 +1644,6 @@
                       "slug": {
                         "type": "string"
                       },
-                      "acceleration": {
-                        "type": "string"
-                      },
-                      "top_speed": {
-                        "type": "string"
-                      },
-                      "power": {
-                        "type": "string"
-                      },
-                      "torque": {
-                        "type": "string"
-                      },
-                      "drive_type": {
-                        "type": "string"
-                      },
-                      "seating_capacity": {
-                        "type": "string"
-                      },
-                      "dimensions": {
-                        "type": "string"
-                      },
-                      "wheelbase": {
-                        "type": "string"
-                      },
-                      "ground_clearance": {
-                        "type": "string"
-                      },
-                      "weight": {
-                        "type": "string"
-                      },
-                      "cargo_volume": {
-                        "type": "string"
-                      },
-                      "warranty": {
-                        "type": "string"
-                      },
                       "review_articles": {
                         "type": "array",
                         "items": {
@@ -1692,6 +1656,12 @@
                               "type": "string"
                             }
                           }
+                        }
+                      },
+                      "specifications": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/components/schemas/SpecificationsSpecSectionComponent"
                         }
                       },
                       "createdAt": {
@@ -1863,6 +1833,40 @@
           },
           "meta": {
             "type": "object"
+          }
+        }
+      },
+      "SpecificationsSpecItemComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "is_highlighted": {
+            "type": "boolean"
+          }
+        }
+      },
+      "SpecificationsSpecSectionComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "section_title": {
+            "type": "string"
+          },
+          "specs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SpecificationsSpecItemComponent"
+            }
           }
         }
       },
@@ -2977,42 +2981,6 @@
                 "slug": {
                   "type": "string"
                 },
-                "acceleration": {
-                  "type": "string"
-                },
-                "top_speed": {
-                  "type": "string"
-                },
-                "power": {
-                  "type": "string"
-                },
-                "torque": {
-                  "type": "string"
-                },
-                "drive_type": {
-                  "type": "string"
-                },
-                "seating_capacity": {
-                  "type": "string"
-                },
-                "dimensions": {
-                  "type": "string"
-                },
-                "wheelbase": {
-                  "type": "string"
-                },
-                "ground_clearance": {
-                  "type": "string"
-                },
-                "weight": {
-                  "type": "string"
-                },
-                "cargo_volume": {
-                  "type": "string"
-                },
-                "warranty": {
-                  "type": "string"
-                },
                 "review_articles": {
                   "type": "array",
                   "items": {
@@ -3547,6 +3515,12 @@
                     }
                   }
                 },
+                "specifications": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SpecificationsSpecSectionComponent"
+                  }
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -3733,42 +3707,6 @@
               "slug": {
                 "type": "string"
               },
-              "acceleration": {
-                "type": "string"
-              },
-              "top_speed": {
-                "type": "string"
-              },
-              "power": {
-                "type": "string"
-              },
-              "torque": {
-                "type": "string"
-              },
-              "drive_type": {
-                "type": "string"
-              },
-              "seating_capacity": {
-                "type": "string"
-              },
-              "dimensions": {
-                "type": "string"
-              },
-              "wheelbase": {
-                "type": "string"
-              },
-              "ground_clearance": {
-                "type": "string"
-              },
-              "weight": {
-                "type": "string"
-              },
-              "cargo_volume": {
-                "type": "string"
-              },
-              "warranty": {
-                "type": "string"
-              },
               "review_articles": {
                 "type": "array",
                 "items": {
@@ -3781,6 +3719,12 @@
                     }
                   ],
                   "example": "string or id"
+                }
+              },
+              "specifications": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SpecificationsSpecSectionComponent"
                 }
               },
               "locale": {
@@ -4658,42 +4602,6 @@
                     "slug": {
                       "type": "string"
                     },
-                    "acceleration": {
-                      "type": "string"
-                    },
-                    "top_speed": {
-                      "type": "string"
-                    },
-                    "power": {
-                      "type": "string"
-                    },
-                    "torque": {
-                      "type": "string"
-                    },
-                    "drive_type": {
-                      "type": "string"
-                    },
-                    "seating_capacity": {
-                      "type": "string"
-                    },
-                    "dimensions": {
-                      "type": "string"
-                    },
-                    "wheelbase": {
-                      "type": "string"
-                    },
-                    "ground_clearance": {
-                      "type": "string"
-                    },
-                    "weight": {
-                      "type": "string"
-                    },
-                    "cargo_volume": {
-                      "type": "string"
-                    },
-                    "warranty": {
-                      "type": "string"
-                    },
                     "review_articles": {
                       "type": "array",
                       "items": {
@@ -5228,6 +5136,12 @@
                         }
                       }
                     },
+                    "specifications": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/SpecificationsSpecSectionComponent"
+                      }
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -5488,42 +5402,6 @@
           "slug": {
             "type": "string"
           },
-          "acceleration": {
-            "type": "string"
-          },
-          "top_speed": {
-            "type": "string"
-          },
-          "power": {
-            "type": "string"
-          },
-          "torque": {
-            "type": "string"
-          },
-          "drive_type": {
-            "type": "string"
-          },
-          "seating_capacity": {
-            "type": "string"
-          },
-          "dimensions": {
-            "type": "string"
-          },
-          "wheelbase": {
-            "type": "string"
-          },
-          "ground_clearance": {
-            "type": "string"
-          },
-          "weight": {
-            "type": "string"
-          },
-          "cargo_volume": {
-            "type": "string"
-          },
-          "warranty": {
-            "type": "string"
-          },
           "review_articles": {
             "type": "array",
             "items": {
@@ -5536,6 +5414,12 @@
                   "type": "string"
                 }
               }
+            }
+          },
+          "specifications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SpecificationsSpecSectionComponent"
             }
           },
           "createdAt": {
@@ -7644,42 +7528,6 @@
                           "slug": {
                             "type": "string"
                           },
-                          "acceleration": {
-                            "type": "string"
-                          },
-                          "top_speed": {
-                            "type": "string"
-                          },
-                          "power": {
-                            "type": "string"
-                          },
-                          "torque": {
-                            "type": "string"
-                          },
-                          "drive_type": {
-                            "type": "string"
-                          },
-                          "seating_capacity": {
-                            "type": "string"
-                          },
-                          "dimensions": {
-                            "type": "string"
-                          },
-                          "wheelbase": {
-                            "type": "string"
-                          },
-                          "ground_clearance": {
-                            "type": "string"
-                          },
-                          "weight": {
-                            "type": "string"
-                          },
-                          "cargo_volume": {
-                            "type": "string"
-                          },
-                          "warranty": {
-                            "type": "string"
-                          },
                           "review_articles": {
                             "type": "array",
                             "items": {
@@ -7692,6 +7540,12 @@
                                   "type": "string"
                                 }
                               }
+                            }
+                          },
+                          "specifications": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/components/schemas/SpecificationsSpecSectionComponent"
                             }
                           },
                           "createdAt": {
@@ -9389,42 +9243,6 @@
                       "slug": {
                         "type": "string"
                       },
-                      "acceleration": {
-                        "type": "string"
-                      },
-                      "top_speed": {
-                        "type": "string"
-                      },
-                      "power": {
-                        "type": "string"
-                      },
-                      "torque": {
-                        "type": "string"
-                      },
-                      "drive_type": {
-                        "type": "string"
-                      },
-                      "seating_capacity": {
-                        "type": "string"
-                      },
-                      "dimensions": {
-                        "type": "string"
-                      },
-                      "wheelbase": {
-                        "type": "string"
-                      },
-                      "ground_clearance": {
-                        "type": "string"
-                      },
-                      "weight": {
-                        "type": "string"
-                      },
-                      "cargo_volume": {
-                        "type": "string"
-                      },
-                      "warranty": {
-                        "type": "string"
-                      },
                       "review_articles": {
                         "type": "array",
                         "items": {
@@ -9437,6 +9255,12 @@
                               "type": "string"
                             }
                           }
+                        }
+                      },
+                      "specifications": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/components/schemas/SpecificationsSpecSectionComponent"
                         }
                       },
                       "createdAt": {

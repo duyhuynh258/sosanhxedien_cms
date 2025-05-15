@@ -482,20 +482,8 @@ export interface ApiEvModelEvModel extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    acceleration: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     battery_kwh: Schema.Attribute.Decimal & Schema.Attribute.Required;
     brand: Schema.Attribute.Relation<'manyToOne', 'api::ev-brand.ev-brand'>;
-    cargo_volume: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     charge_time: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -508,24 +496,6 @@ export interface ApiEvModelEvModel extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText &
       Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    dimensions: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    drive_type: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    ground_clearance: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -544,12 +514,6 @@ export interface ApiEvModelEvModel extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    power: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     price_vnd: Schema.Attribute.BigInteger & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     range_km: Schema.Attribute.Integer & Schema.Attribute.Required;
@@ -557,20 +521,11 @@ export interface ApiEvModelEvModel extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::review-article.review-article'
     >;
-    seating_capacity: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     slug: Schema.Attribute.UID<'model_name'> & Schema.Attribute.Required;
-    top_speed: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    torque: Schema.Attribute.String &
+    specifications: Schema.Attribute.Component<
+      'specifications.spec-section',
+      true
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -579,24 +534,6 @@ export interface ApiEvModelEvModel extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    warranty: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    weight: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    wheelbase: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     year: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }

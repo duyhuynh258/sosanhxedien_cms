@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_specifications_sections",
+  "info": {
+    "displayName": "Specification Section",
+    "icon": "list",
+    "description": "Group of related car specifications"
+  },
+  "options": {},
+  "attributes": {
+    "section_title": {
+      "type": "string",
+      "required": true
+    },
+    "specs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "specifications.spec-item"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_specifications_items",
+  "info": {
+    "displayName": "Specification Item",
+    "icon": "wrench",
+    "description": "Individual car specification item"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "is_highlighted": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
